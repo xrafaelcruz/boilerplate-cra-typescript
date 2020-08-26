@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import LogoOriginal from 'assets/svg/Logo'
+import HeroIllustration from 'assets/svg/HeroIllustration'
 
 export const Wrapper = styled.main`
   align-items: center;
@@ -14,7 +16,7 @@ export const Wrapper = styled.main`
   width: 100%;
 `
 
-export const Logo = styled.img`
+export const Logo = styled(LogoOriginal)`
   margin: 0 0 2rem;
   width: 25rem;
 `
@@ -28,7 +30,7 @@ export const Description = styled.h2`
   font-weight: 400;
 `
 
-export const Illustration = styled.img`
+export const Illustration = styled(HeroIllustration)`
   margin: 3rem 0 0;
   width: min(30rem, 100%);
 `

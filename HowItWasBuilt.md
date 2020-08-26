@@ -188,7 +188,7 @@ import 'jest-styled-components'
 _To preview components and your documentation._
 
 ```bash
-npx -p @storybook/cli sb init --type react
+npx sb init
 ```
 
 Will be create `.storybook` and `stories` folders
@@ -205,10 +205,7 @@ After insert in `scripts storybook and build-storybook` the params `-s ./public`
 "devDependencies": {
     "@babel/core": "^7.10.4",
     ...,
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/addon-essentials": "^6.0.10",
     "@storybook/react": "^5.3.19",
     ...,
     "babel-loader": "^8.1.0",
