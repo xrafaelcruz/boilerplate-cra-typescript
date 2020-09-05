@@ -191,7 +191,7 @@ _To preview components and your documentation._
 npx sb init
 ```
 
-Will be create `.storybook` and `stories` folders
+Will be create `.storybook` and `src/stories` folders
 
 Will be modified `package.json`
 After insert in `scripts storybook and build-storybook` the params `-s ./public` to use static images.
@@ -205,45 +205,27 @@ After insert in `scripts storybook and build-storybook` the params `-s ./public`
 "devDependencies": {
     "@babel/core": "^7.10.4",
     ...,
-    "@storybook/addon-essentials": "^6.0.10",
-    "@storybook/react": "^5.3.19",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/node-logger": "^6.0.21",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.21",
     ...,
     "babel-loader": "^8.1.0",
     ...
 }
 ```
 
-```bash
-yarn add --dev @storybook/preset-create-react-app
-```
+I modified the `src/stories` structure and change the component button to src/components.
 
-In `.storybook/main.js`
+In `.storybook/main.js` change stories to
 
 ```bash
-stories: ['../src/components/**/stories.tsx']
-addons: ['@storybook/preset-create-react-app', ...]
+stories: ['../src/**/**/*stories.@(mdx|tsx)'],
 ```
 
-Create decorator `.storybook/withGlobalStyles.tsx` and add settings.
-Create `.storybook/config.js` and add settings.
-
-Addon Knobs
-
-```bash
-yarn add --dev @storybook/addon-knobs
-```
-
-In `.storybook/main.js`
-
-```bash
-addons: [..., '@storybook/addon-knobs/register']
-```
-
-In `src/components/Main/stories.tsx`
-
-```bash
-import { withKnobs, text } from '@storybook/addon-knobs'
-```
+I modified the `.storybook/preview.js` and added settings.
 
 #### PWA
 

@@ -26,6 +26,7 @@
     "test:watch": "yarn test --watch",
     "eject": "react-scripts eject",
     "lint": "eslint src/*.{ts,tsx} --max-warnings=0",
+    "lint:staged": "eslint src/*.{ts,tsx}",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public"
   },
@@ -36,7 +37,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint:staged --fix"
     ]
   },
   "dependencies": {
